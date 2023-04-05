@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #222328;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #222328;
+}
+.container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row {
+    display: flex;
+    justify-content: flex-start;
+}
+/***** HEADER *****/
+.menubar {
+    width: 250px;
+    height: 650px;
+    border-right: 1px solid #222328;
+}
+.logo {
+    width: 250px;
+    height: 100px;
+}
+.logo a img {
+    margin: 30px 25px;
+}
+/***** NAV *****/
+.gnb {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.gnb>li {
+    margin: 0 auto;
+    width: 200px;
+    background: #ebcbbd;
+    border-bottom: 1px solid #c99781;
+    transition: all 800ms;
+}
+.gnb>li:hover {
+    background: #c99781;
+    transition: all 800ms;
+}
+.gnb>li:last-child {
+    border-bottom: none;
+}
+.gnb>li>a {
+    display: block;
+    text-align: center;
+    font-weight: 900;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #c99781;;
+}
+.dn {
+    display: none;
+}
+.lnb {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #ebcbbd;
+    border-top: none;
+    padding-bottom: 5px;
+}
+.lnb>li {
+    margin: 0 auto;
+    width: 200px;  
+    position: relative;
+    transition: all 800ms;
+}
+.lnb>li:not(:last-child)::after {
+    content: "";
+    height: 1px;
+    width: 180px;
+    background: #c99781;
+    position: absolute;
+    bottom: -1px;
+    left: 10px;
+}  
+.lnb>li>a {
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.lnb>li:hover {
+    background: #c99781;
+    transition: all 800ms;
+}
+/***** HREO *****/
+.hero {
+    width: 750px;
+    height: 350px;
+}
+.fadeIn {
+    position: relative;
+}
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.zindex {
+    z-index: 3;
+}
+.zindex2 {
+    z-index: 2;
+}
+/***** TAB *****/
+.nt-gl {
+    margin-left: 5px;
+}
+.tab {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start; 
+}
+.tab a {
+    display: block;
+    line-height: 35px;
+    background: #c99781;
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.tab a.active {
+    background: #ebcbbd;
+    color: #222328;
+    font-weight: bold;
+}
+.tabcontent div {
+    display: none;
+}
+.tabcontent div.active {
+    display: block;
+}
+#notice {
+    position: relative;
+    width: 440px;
+    background: #ebcbbd;
+}
+#notice ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+#notice ul li {
+    background: #ebcbbd;
+    transition: all 500ms; 
+}
+#notice ul li:hover {
+    background: #c99781;
+    transition: all 500ms;
+}
+#notice ul li a {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: block;
+    line-height: 35px;
+    border-bottom: 1px dashed #c99781;
+}
+#notice ul li:last-child a {
+    border-bottom: none;
+}
+#notice a:first-child {
+    padding-top: 1px;
+}
+#notice a span {
+    font-size: 10px;
+    position: absolute;
+    right: 20px;
+}
+#gallery {
+    position: relative;
+    width: 440px;
+    height: 165px;
+    background: #ebcbbd;
+    padding-left: 10px;
+}
+#gallery img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: 23px 8px;
+}
+/***** CONTENT *****/
+.th_m {
+    width: 750px;
+    height: 200px;
+    display: flex;
+}
+.nt-gl {
+    width: 450px;
+    height: 200px;
+}
+.banner {
+    width: 150px;
+    height: 200px;
+    padding-top: 5px;
+}
+/***** QUICK *****/
+.quick p {
+    margin: 0;
+    padding: 0;
+    margin: 20px 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+.quick span {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url(../images/quick.png) no-repeat;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.quick span.in {
+    background-position: -221px -24px;
+}
+.quick span.fa {
+    background-position: -155px -24px;
+}
+.quick span.tw {
+    background-position: -27px -74px;
+}
+/***** FOOTER *****/
+footer {
+    width: 750px;
+    height: 100px;
+    background: #83858f;
+}
+footer .row {
+    width: 750px;
+    height: 100px;
+}
+.logo-f img {
+    margin: 35px 25px;
+}
+.fd-c {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+}
+.menu-f {
+    width: 550px;
+    height: 50px;
+    position: relative;
+}
+.menu-f ul {
+    list-style: none;
+    display: flex;
+    width: 550px;
+    position: absolute;
+    top: 15px;
+}
+.menu-f ul li {
+    margin-right: 10px;
+}
+.menu-f ul a {
+    color: #fff;
+}
+.menu-f ul a.strong {
+    font-weight: 800;
+}
+.copy {
+    width: 550px;
+    height: 50px;
+    position: relative;
+}
+.copy p {
+    color: #fff;
+    position: absolute;
+    top: -10px;
+    left: 55px;
+}
